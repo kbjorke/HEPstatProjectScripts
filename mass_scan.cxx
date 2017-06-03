@@ -14,9 +14,6 @@ TH1D *h_MassScan_exp_win = new TH1D("h_MassScan_exp_win", "", 600, 40.0, 400.0);
 TH1D *h_MassScan_obs_sig = new TH1D("h_MassScan_obs_sig", "", 600, 40.0, 400.0);
 TH1D *h_MassScan_obs_win = new TH1D("h_MassScan_obs_win", "", 600, 40.0, 400.0);
 
-//double masswindow_width = 7.15;
-//double rel_sigma_b = 0.10;
-
 void mass_scan(){
 
   for (int i_bin = 1; i_bin<=h_MassScan_exp_sig->GetNbinsX(); i_bin++ ){
@@ -46,8 +43,6 @@ void mass_scan(){
 
   h_MassScan_exp_sig->SetLineColor(1);
   h_MassScan_exp_sig->SetLineWidth(2);
-  //h_masswindow_observed->SetLineColor(4);
-  //h_masswindow_observed->SetLineWidth(2);
 
   h_MassScan_exp_sig->SetAxisRange(-1.,7.,"Y");
   h_MassScan_exp_sig->Draw("l");
@@ -89,8 +84,6 @@ void mass_scan(){
 
   h_MassScan_obs_sig->SetLineColor(1);
   h_MassScan_obs_sig->SetLineWidth(2);
-  //h_massobs_sigdow_observed->SetLineColor(4);
-  //h_massobs_sigdow_observed->SetLineWidth(2);
 
   h_MassScan_obs_sig->SetAxisRange(-1.,7.,"Y");
   h_MassScan_obs_sig->Draw("l");
@@ -109,8 +102,6 @@ void mass_scan(){
 
   h_MassScan_obs_win->SetLineColor(1);
   h_MassScan_obs_win->SetLineWidth(2);
-  //h_massobs_window_observed->SetLineColor(4);
-  //h_massobs_window_observed->SetLineWidth(2);
 
   h_MassScan_obs_win->SetAxisRange(0.,25.,"Y");
   h_MassScan_obs_win->Draw("l");

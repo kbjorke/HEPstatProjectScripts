@@ -11,9 +11,6 @@ using namespace std;
 TH1D *h_LumiScan_sig = new TH1D("h_LumiScan_sig", "", 72, 1.0, 8.2);
 TH1D *h_LumiScan_win = new TH1D("h_LumiScan_win", "", 72, 1.0, 8.2);
 
-//double masswindow_width = 7.15;
-//double rel_sigma_b = 0.10;
-
 void lumi_scan_optimasswin(){
 
   for (int i_bin = 1; i_bin<=h_LumiScan_sig->GetNbinsX(); i_bin++ ){
@@ -40,8 +37,6 @@ void lumi_scan_optimasswin(){
 
   h_LumiScan_sig->SetLineColor(2);
   h_LumiScan_sig->SetLineWidth(2);
-  //h_masswindow_observed->SetLineColor(4);
-  //h_masswindow_observed->SetLineWidth(2);
 
   h_LumiScan_sig->SetAxisRange(1.,7.,"Y");
   h_LumiScan_sig->Draw("l");
@@ -63,8 +58,6 @@ void lumi_scan_optimasswin(){
 
   h_LumiScan_win->SetLineColor(2);
   h_LumiScan_win->SetLineWidth(2);
-  //h_masswindow_observed->SetLineColor(4);
-  //h_masswindow_observed->SetLineWidth(2);
 
   h_LumiScan_win->SetAxisRange(0.,10.,"Y");
   h_LumiScan_win->Draw("l");

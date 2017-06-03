@@ -14,8 +14,6 @@ void LuminosityScan(){
   
   int Irebin = 20;
     
-  //TH1D *h_LumiScan_spb = new TH1D("h_LumiScan_spb", "", 36, 1.0, 8.2);
-  //TH1D *h_LumiScan_b = new TH1D("h_LumiScan_b", "", 36, 1.0, 8.2);
   TH1D *h_LumiScan_spb = new TH1D("h_LumiScan_spb", "", 7, 1.0, 8.0);
   TH1D *h_LumiScan_b = new TH1D("h_LumiScan_b", "", 7, 1.0, 8.0);
   

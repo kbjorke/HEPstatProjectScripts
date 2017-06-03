@@ -47,7 +47,6 @@ void lumi_scan(){
 
   h_LumiScan->SetAxisRange(2.,6.5,"Y");
   h_LumiScan_sigma->SetAxisRange(2.,6.5,"Y");
-  //h_LumiScan->Draw("l");
   stack->Draw("l nostack");
   stack->SetMinimum(2);
   stack->SetMaximum(6.5);
