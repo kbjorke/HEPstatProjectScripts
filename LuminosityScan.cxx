@@ -125,17 +125,34 @@ void LuminosityScan(){
 
   canvas2->SetLogy(1);
 
-  TLine *line1 = new TLine(1,ROOT::Math::normal_cdf_c(3),8,ROOT::Math::normal_cdf_c(3));
+  TLine *line1 = new TLine(1,ROOT::Math::normal_cdf_c(3),7.5,ROOT::Math::normal_cdf_c(3));
+  line1->SetLineWidth(3);
   line1->SetLineStyle(9);
   line1->Draw();
 
-  TLine *line2 = new TLine(1,ROOT::Math::normal_cdf_c(4),8,ROOT::Math::normal_cdf_c(4));
+  TLine *line2 = new TLine(1,ROOT::Math::normal_cdf_c(4),7.5,ROOT::Math::normal_cdf_c(4));
+  line2->SetLineWidth(3);
   line2->SetLineStyle(9);
   line2->Draw();
 
-  TLine *line3 = new TLine(1,ROOT::Math::normal_cdf_c(5),8,ROOT::Math::normal_cdf_c(5));
+  TLine *line3 = new TLine(1,ROOT::Math::normal_cdf_c(5),7.5,ROOT::Math::normal_cdf_c(5));
+  line3->SetLineWidth(3);
   line3->SetLineStyle(9);
   line3->Draw();
+
+  //-- axes
+  AddText( 0.900, 0.035, "Luminosity scale factor",0.060, 0.,"right"); // X-axis
+  AddText( 0.040, 0.900, "1 -CL_b",0.060,90.,"right");   // Y-axis   
+  AddText( 0.800, 0.700, "3 sigma", 0.040, 0., "right");
+  AddText( 0.800, 0.530, "4 sigma", 0.040, 0., "right");
+  AddText( 0.800, 0.350, "5 sigma", 0.040, 0., "right");
+
+
+  auto legend = new TLegend(0.5,0.5,0.7,0.7);
+  legend->AddEntry(h_LumiScan_spb,"median s+b");
+  legend->AddEntry(h_LumiScan_b,"median b-only");
+  legend->Draw();
+
 
   return;
 }
